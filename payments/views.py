@@ -135,7 +135,6 @@ def home(request):
             <h1>Welcome to the Payment Gateway API</h1>
             <ul>
                 <li><a href="{reverse('create-payment')}">Create Payment</a></li>
-                <li><a href="/api/v1/payments/verify/">Verify Payment</a> (POST only)</li>
             </ul>
         </body>
     </html>
