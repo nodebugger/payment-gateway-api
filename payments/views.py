@@ -75,7 +75,12 @@ class PaymentDetailView(generics.RetrieveAPIView):
 
 # Verifying Payment
 class VerifyPayment(APIView):
-    def get(self, request, reference):
+    def post(self, request):
+
+        reference = request.data.get('reference')
+        if not reference:
+            return Response({"error": "Reference is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
         url = f"https://api.paystack.co/transaction/verify/{reference}"
         headers = {
             "Authorization": f"Bearer {settings.PAYSTACK_SECRET_KEY}",
