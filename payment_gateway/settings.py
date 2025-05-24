@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+PAYSTACK_SECRET_KEY = "sk_test_b9065b8a299d550af4cc66f9b30d6fe0d6361b6f"
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -122,5 +124,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-PAYSTACK_SECRET_KEY = "sk_test_b9065b8a299d550af4cc66f9b30d6fe0d6361b6f"
